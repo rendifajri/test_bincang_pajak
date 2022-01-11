@@ -15,8 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 $path = "App\\Http\\Controllers\\";
 
-Route::get   ('item', [$path."ItemController", 'index']);
-Route::get   ('destination', [$path."DestinationController", 'index']);
+Route::get ('item', [$path."ItemController", 'index']);
+Route::get ('destination', [$path."DestinationController", 'index']);
 
-Route::get   ('invoice', [$path."InvoiceController", 'index']);
-Route::post  ('invoice', [$path."InvoiceController", 'create']);
+Route::get ('invoice', [$path."InvoiceController", 'index']);
+Route::get ('invoice/detail/{id}', [$path."InvoiceController", 'detail']);
+Route::post('invoice', [$path."InvoiceController", 'create']);
+Route::post('invoice/update/{id}', [$path."InvoiceController", 'update']);

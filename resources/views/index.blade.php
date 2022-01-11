@@ -33,6 +33,7 @@
                             <td>{{$row->subject}}</td>
                             <td class="text-end">{{number_format($row->total_amount)}}</td>
                             <td>
+                                <a href="{{ url('/') }}/detail/{{$row->id}}" class="btn btn-primary">Detail</a>
                                 <a href="{{ url('/') }}/update/{{$row->id}}" class="btn btn-warning">Update</a>
                                 <a href="{{ url('/') }}/delete/{{$row->id}}" class="btn btn-danger">Delete</a>
                             </td>

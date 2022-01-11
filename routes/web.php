@@ -16,3 +16,6 @@ $path = "App\\Http\\Controllers\\";
 
 Route::get('/', [$path."WebInvoiceController", 'index']);
 Route::get('/create', [$path."WebInvoiceController", 'create']);
+Route::get('/update/{id}', [$path."WebInvoiceController", 'update']);
+Route::get('/detail/{id}', [$path."WebInvoiceController", 'detail']);
+Route::get('/delete/{id}', [$path."WebInvoiceController", 'delete']);

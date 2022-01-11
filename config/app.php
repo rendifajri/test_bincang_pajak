@@ -230,6 +230,11 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'AccessDeniedHttpException' => Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException::class,
+        'AuthenticationException' => Illuminate\Auth\AuthenticationException::class,
+        'ModelNotFoundException' => Illuminate\Database\Eloquent\ModelNotFoundException::class,
+        'NotFoundHttpException' => Symfony\Component\HttpKernel\Exception\NotFoundHttpException::class,
+        'ValidationException' => Illuminate\Validation\ValidationException::class,
     ],
 
 ];

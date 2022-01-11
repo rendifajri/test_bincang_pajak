@@ -1,0 +1,26 @@
+php artisan make:model Destination --migration
+name, address
+php artisan make:model Item --migration
+name, item_type, price
+php artisan make:model Invoice --migration
+destination_id, inv_no, issue_date, due_date, subject
+php artisan make:model InvoiceItem --migration
+invoice_id, item_id, qty, price
+
+----- Tutorial Laravel 8 -----
+Pendahuluan
+- untuk instalasi, pada terminal ketik
+  composer create-project --prefer-dist laravel/laravel nama_folder_project
+- letak model(--migration -> sudah automatis migration)
+  nama_folder_project/app/Models
+  php artisan make:model Department --migration
+  php artisan make:model Department
+- letak controller
+  nama_folder_project/Http/Controllers
+  php artisan make:controller DepartmentController
+- letak view
+  nama_folder_project/resources/views
+- letak css & js
+  nama_folder_project/public
+- error aliases
+  composer require --dev barryvdh/laravel-ide-helper
